@@ -13,6 +13,27 @@ This is a simple magical arena game where two players fight until one of them di
 5. The difference between the attack damage and the defense strength reduces the defender's health.
 6. The game ends when a player's health reaches zero.
 
+## Game Mechanics
+
+- **Players**: There are two players, Player A and Player B, each with their own set of attributes (health, strength, attack).
+- **Turns**: Players take turns attacking each other based on their current health status.
+- **Attacks**: Attacks are determined by rolling a six-sided dice to calculate damage, factoring in the attacker's attack strength and the defender's defense strength.
+- **Victory**: The game continues until one player's health drops to zero or below. The player with remaining health wins the match.
+
+## Test Cases
+
+### Player Class Tests
+
+- **testReduceHealth**: Checks if the `reduceHealth` method correctly reduces a player's health and ensures it does not go below zero.
+- **testIsAlive**: Tests the `isAlive` method to verify the player's life status based on their current health.
+
+### Arena Class Tests
+
+- **testAttack**: Verifies that the `attack` method correctly reduces the defender's health when an attack is initiated.
+- **testStartMatch_PlayerAWins**: Tests the overall match outcome to ensure the correct player is declared the winner based on their remaining health.
+- **testRollDice**: Validates the `rollDice` method to ensure it produces results within the expected range (1 to 6).
+
+
 ## How to Run
 
 1. Clone the repository.
@@ -21,10 +42,7 @@ This is a simple magical arena game where two players fight until one of them di
 4. To run the unit tests, use your IDE's built-in testing tools or run `mvn test` if using Maven.
 
 
-## Unit Tests
 
-Unit tests are provided to ensure the functionality of the game mechanics. 
-To run the tests, use your IDE's testing tools or run `mvn test` if using Maven.
 
 
 
